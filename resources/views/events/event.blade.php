@@ -43,17 +43,190 @@
            </div>
         </div>
     </div>
-    <div class="container">
+    <!-- About -->
+    <section >
+        <div class="container">
+          <h1>About The Event</h1>
+          <p>Lid est laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips amets. Lid est laborum dolo rumes fugats untras.
 
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut convallis tellus vel malesuada gravida. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed posuere lectus lectus, ornare pulvinar sem vestibulum non. Phasellus neque leo, placerat ac ipsum ut, varius sagittis quam. Etiam in ligula auctor, lobortis eros ac, cursus quam. Nulla dictum ullamcorper eros et gravida. Vivamus eget tristique ipsum. Integer sed enim sed lorem ultricies elementum. Mauris nec lectus nunc. Sed vitae tempus lorem. Nam nec ornare velit, at vestibulum magna. Proin ut tortor vitae augue tincidunt hendrerit.
+Rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips amets.</p>
+          <div class="justifyFlex">
+            <div class="aboutBox">
+                <span class="fa fa-map-marker"></span>
+                <h3>Where</h3>
+                <p>West International Conference Center</p>
 
-Nulla id neque lacus. In feugiat nec odio a gravida. Phasellus non dolor tincidunt, imperdiet felis eu, viverra lectus. Donec pretium vehicula nisl, vitae pulvinar neque rhoncus eget. Nullam mi nibh, elementum et commodo ac, blandit in nisi. Praesent magna nibh, convallis quis ullamcorper id, hendrerit non dui. Suspendisse vel porttitor ex. Sed commodo maximus ex ac convallis. Nulla fringilla viverra dignissim. Nunc commodo erat purus. Suspendisse fermentum velit ut nulla fringilla, vestibulum tincidunt orci sollicitudin. Vestibulum venenatis suscipit sollicitudin.
+                <p> San Francisco, CA</p>
 
-Quisque id aliquet dui. Cras condimentum, diam non vehicula porta, libero dolor luctus ipsum, vel efficitur sapien ipsum vitae turpis. Integer fringilla urna dui. Mauris vulputate nec lectus sit amet aliquam. Duis ac auctor dolor. Morbi condimentum metus sit amet mi lobortis consectetur. Pellentesque ac dictum odio. Fusce lacinia quam et eros tincidunt porttitor. Aliquam feugiat ullamcorper tincidunt. Cras pharetra neque ullamcorper, pretium metus at, dapibus magna. Donec aliquet orci et dictum rhoncus. Integer nisi sem, egestas at mollis id, venenatis id orci.
+                <div class="btn ">Learn more</div>
+            </div>
+            <div class="aboutBox">
+              <span class="fa fa-clock-o"></span>
+              <h3>When</h3>
+              <p>Saturday to Thursday (09:00 AM to 05:00 PM)</p>
 
-Donec bibendum, massa sit amet cursus aliquam, tellus odio imperdiet ligula, sit amet gravida felis elit molestie enim. Maecenas tincidunt ante quis erat sollicitudin feugiat. Cras non interdum dui. Pellentesque eget posuere quam. Nunc a lacus sed nibh egestas molestie sed cursus enim. Sed id varius magna, nec molestie massa. Nam risus turpis, scelerisque a accumsan nec, efficitur at sem.
+              <p>July 15 to 19, 2017</p>
+            </div>
+          </div>
+        </div>
+    </section>
 
-Maecenas sed dolor est. Donec nec purus non leo efficitur elementum ultricies in nunc. Aenean quis scelerisque nibh. Maecenas id orci at enim venenatis ultrices. Mauris pretium tortor eu ante ultrices ullamcorper. In eleifend, ligula sed ullamcorper facilisis, velit arcu porta mauris, non facilisis nisl nibh at lorem. Sed suscipit ante ac malesuada consequat. Vestibulum sodales orci libero, non fringilla mauris vulputate vel. Duis suscipit auctor felis dictum commodo. Maecenas placerat dapibus nisi, sit amet vehicula libero elementum ut. In hac habitasse platea dictumst. Ut maximus, arcu at gravida molestie, urna magna scelerisque mi, in gravida libero neque blandit sem. Nulla sed orci a lectus aliquet suscipit faucibus in ligula.
-</p>
-    </div>
+    <!-- COUNTERS -->
+
+    <section class="stats">
+      <div class="container justifyFlex statsContent">
+          <div class="statsBox">
+              <h3>968</h3>
+              <h4>Participents</h4>
+              <hr>
+              <span class="fa fa-users"></span>
+          </div>
+          <div class="statsBox">
+            <h3>117</h3>
+            <h4>Speakers</h4>
+            <hr>
+            <span class="fa fa-microphone"></span>
+          </div>
+          <div class="statsBox">
+            <h3>121</h3>
+            <h4>Sessions</h4>
+            <hr>
+            <span class="fa fa-calendar"></span>
+          </div>
+          <div class="statsBox">
+            <h3>87</h3>
+            <h4>Sponsors</h4>
+            <hr>
+            <span class="fa fa-windows"></span>
+          </div>
+      </div>
+      <div class="statsOverlay"></div>
+    </section>
+
+    <section class="speakers">
+        <div class="container">
+            <h1>Speakers</h1>
+            <div class="speakersContainer justifyFlex">
+                <div class="speakerBox">
+                    <img src="{{asset('images/s1.jpg')}}">
+                    <div class="speakerInfo">
+                      <h3>Jonathan Smith</h3>
+                      <h4>COO, Apple Inc.</h4>
+                    </div>
+                    <div class="social">
+                        <span class="fa fa-twitter"></span>
+                        <span class="fa fa-linkedin"></span>
+                        <span class="fa fa-dribbble"></span>
+                    </div>
+                </div>
+                <div class="speakerBox">
+                    <img src="{{asset('images/s2.jpg')}}">
+                    <div class="speakerInfo">
+                      <h3>Jonathan Smith</h3>
+                      <h4>COO, Apple Inc.</h4>
+                    </div>
+                    <div class="social">
+                        <span class="fa fa-twitter"></span>
+                        <span class="fa fa-linkedin"></span>
+                        <span class="fa fa-dribbble"></span>
+                    </div>
+                </div>
+                <div class="speakerBox">
+                    <img src="{{asset('images/s3.jpg')}}">
+                    <div class="speakerInfo">
+                      <h3>Jonathan Smith</h3>
+                      <h4>COO, Apple Inc.</h4>
+                    </div>
+                    <div class="social">
+                        <span class="fa fa-twitter"></span>
+                        <span class="fa fa-linkedin"></span>
+                        <span class="fa fa-dribbble"></span>
+                    </div>
+                </div>
+                <div class="speakerBox">
+                    <img src="{{asset('images/s1.jpg')}}">
+                    <div class="speakerInfo">
+                      <h3>Jonathan Smith</h3>
+                      <h4>COO, Apple Inc.</h4>
+                    </div>
+                    <div class="social">
+                        <span class="fa fa-twitter"></span>
+                        <span class="fa fa-linkedin"></span>
+                        <span class="fa fa-dribbble"></span>
+                    </div>
+                </div>
+                <div class="speakerBox">
+                    <img src="{{asset('images/s2.jpg')}}">
+                    <div class="speakerInfo">
+                      <h3>Jonathan Smith</h3>
+                      <h4>COO, Apple Inc.</h4>
+                    </div>
+                    <div class="social">
+                        <span class="fa fa-twitter"></span>
+                        <span class="fa fa-linkedin"></span>
+                        <span class="fa fa-dribbble"></span>
+                    </div>
+                </div>
+                <div class="speakerBox">
+                    <img src="{{asset('images/s3.jpg')}}">
+                    <div class="speakerInfo">
+                      <h3>Jonathan Smith</h3>
+                      <h4>COO, Apple Inc.</h4>
+                    </div>
+                    <div class="social">
+                        <span class="fa fa-twitter"></span>
+                        <span class="fa fa-linkedin"></span>
+                        <span class="fa fa-dribbble"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="banner">
+        <div class="container justifyFlex">
+            <div class="col4">
+
+                    <div class="fa fa-map-marker"></div>
+                    <div>
+                      <h3>Wst. Conference Center</h3>
+                      San Francisco, CA
+                    </div>
+
+            </div>
+            <div class="col4">
+
+                  <div class="fa fa-clock-o"></div>
+                  <div>
+                    <h3>July 15 - 19, 2017</h3>
+                    09:00 AM - 05:00 PM
+                  </div>
+
+            </div>
+            <div class="col4">
+
+                  <div class="fa fa-sitemap"></div>
+                  <div>
+                    <h3>343 Available Seats</h3>
+                    Hurryup! few tickets are left
+                  </div>
+
+            </div>
+            <div class="col4">
+
+                  <div class="fa fa-cutlery"></div>
+                  <div>
+                    <h3>Free Lunch & Snacks</h3>
+                    Don't miss it
+                  </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="schedule">
+        <div class="container">
+            
+        </div>
+    </section>
 @endsection

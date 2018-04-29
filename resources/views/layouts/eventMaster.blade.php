@@ -4,6 +4,7 @@
       <link rel="stylesheet" href="{{asset('css/event.css')}}">
 
       <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link href="{{ asset('css/font-awesome.css') }}" rel="stylesheet">
   </head>
 
   <body  class="text-center">

@@ -31,6 +31,7 @@ header{
   background-size:cover;
   position: relative;
   color:#fff;
+  background-attachment: fixed;
 }
 .headerOverlay{
   position: absolute;
@@ -84,6 +85,7 @@ header{
   -webkit-transition: background-color 200ms linear;
     -ms-transition: background-color 200ms linear;
     transition: background-color 200ms linear;
+  color:#fff;
 }
 .btn:hover{
   background:#ff8922;
@@ -138,3 +140,94 @@ border-radius:  20%;
 .counter-box:nth-child(2):after{background:#ea531c;}
 .counter-box:nth-child(3):after{background:cornflowerblue;}
 .counter-box:nth-child(4):after{background:#ff8922;}
+
+
+/*** ABOUT ***/
+.aboutBox{
+    width:50%;
+}
+.aboutBox .fa{
+  color:#f90048;
+  font-size:3rem;
+}
+
+section{
+  padding:20px 0;
+}
+/*** sTATS ********/
+.stats{
+  background:url(../images/stats.jpg);
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  background-attachment: fixed;
+}
+.statsBox{
+  width: 25%;
+  text-align: center;
+  color:#fff;
+  box-sizing: border-box;
+  padding:15px;
+}
+.statsBox h3{
+  font-size:4rem;
+  margin:10px 0;
+}
+.statsBox h4{
+  font-size:1rem;
+}
+.statsBox .fa{
+  font-size:2rem;
+}
+.statsOverlay{
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background:rgba(0, 0, 0, 0.5);
+}
+.statsContent{
+  position: relative;
+  z-index:1;
+}
+/**** Speakers ***/
+.speakerBox{
+    width: 32%;
+    background:#fff;
+    box-shadow:0 0 100px rgba(0,0,0,.1);
+    margin:15px 0.5%;
+
+}
+.speakerBox img{
+  width: 100%;
+}
+.speakers{
+  background:#f1f1f1;
+}
+.speakerInfo{
+  padding:15px;
+  text-align: center;
+}
+.social{
+  text-align: center;
+}
+/*** BANNER **/
+.banner{
+  background: -webkit-gradient(linear,left top,right top,from(#f90048),to(#ff8922));
+    background: -webkit-linear-gradient(left,#f90048,#ff8922);
+    background: linear-gradient(90deg,#f90048,#ff8922);
+    background-color: #f90048;
+    color:#fff;
+}
+.col4{
+  width:25%;
+}
+.banner .fa{
+  font-size:3rem;
+  float: left;
+  margin-right:15px;
+  padding:15px 20px;
+  box-sizing: border-box;
+}
