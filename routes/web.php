@@ -21,6 +21,7 @@ Route::get('create-event','CreateEventController@createEvent');
 Route::post('create-event','CreateEventController@postCreateEvent');
 
 Route::get('event/{slug}','EventController@getEvent');
+Route::get('event/edit/{slug}','EventController@editEvent');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

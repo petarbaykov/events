@@ -20,4 +20,14 @@ class EventController extends Controller
 
       return "event not found";
     }
+
+    public function editEvent($slug){
+      $event = Event::where('slug',$slug)->first();
+
+      $data = [
+
+        'event'=>$event
+      ];
+      return view('events.edit')->with($data);
+    }
 }
