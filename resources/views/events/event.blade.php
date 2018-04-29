@@ -226,7 +226,128 @@ Rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips
 
     <section class="schedule">
         <div class="container">
-            
+          <h1>Schedule</h1>
+          <div class="schedule_row">
+                <span class="time">8.00 - 9.00</span>
+                <div class="activity">Регистрация</div>
+                <span class="starter">
+
+                </span>
+            </div>
+            <div class="schedule_row">
+                    <span class="time">9.00 - 10.00</span>
+                    <div class="activity">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                    <span class="starter">
+
+                    </span>
+            </div>
+            <div class="schedule_row">
+                    <span class="time">10.00 - 11.00</span>
+                    <div class="activity">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                    <span class="starter">
+
+                    </span>
+                </div>
         </div>
     </section>
+
+    <section class="pricing">
+        <div class="container justifyFlex">
+            <div class="col3 priceBox">
+                <h3>Basic</h3>
+                <h2 class="price">$ 29</h2>
+                <ul>
+                  <li>Entrance </li>
+                  <li>Free Lunch & Snacks </li>
+                  <li>Custom Badge </li>
+                  <li>Certificate</li>
+                  <li></li>
+                </ul>
+
+                <div class="btn">
+                  Buy ticket
+                </div>
+            </div>
+            <div class="col3 priceBox">
+              <h3>Basic</h3>
+              <h2 class="price">$ 29</h2>
+              <ul>
+                <li>Entrance </li>
+                <li>Free Lunch & Snacks </li>
+                <li>Custom Badge </li>
+                <li>Certificate</li>
+                <li></li>
+              </ul>
+
+              <div class="btn">
+                Buy ticket
+              </div>
+            </div>
+            <div class="col3 priceBox">
+              <h3>Basic</h3>
+              <h2 class="price">$ 29</h2>
+              <ul>
+                <li>Entrance </li>
+                <li>Free Lunch & Snacks </li>
+                <li>Custom Badge </li>
+                <li>Certificate</li>
+                <li></li>
+              </ul>
+
+              <div class="btn">
+                Buy ticket
+              </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sponsors">
+        <div class="container">
+          <h1>Sponsors</h1>
+          <div class="justifyFlex">
+              <div class="col3 sponsorBox">
+                <img src="{{asset('images/google.png')}}" alt="">
+              </div>
+              <div class="col3 sponsorBox">
+                <img src="{{asset('images/facebook.jpg')}}" alt="">
+              </div>
+              <div class="col3 sponsorBox">
+                <img src="{{asset('images/microsoft.png')}}" alt="">
+              </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="map">
+        <div class="container">
+            <h1>Venu Information</h1>
+            <div class="justifyFlex">
+              <div class="infoTile col3">
+                <span class="fa fa-map-marker"></span>
+                <h2>Location</h2>
+                <p>PLEASE NOTE: The conference takes place at the Oagnuson Convention Center Hotel (TFE 3EW), not the Spanish College Site. See the map for exact information.</p>
+              </div>
+              <div class="infoTile col3">
+                <span class="fa fa-bus"></span>
+                <h2>Transport</h2>
+                <p>To get to the venu place, you can take one of the city bus lines, tube or railway service. All the services are comfortable to reach into the place.</p>
+
+              </div>
+              <div class="infoTile col3">
+                <span class="fa fa-building"></span>
+                <h2>Hotels</h2>
+                <p>Suitable Hotels and Restaurents are surrounded all the area. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
+
+              </div>
+            </div>
+
+        </div>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d2994256.075384785!2d23.25249451783162!3d42.871193600000005!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sbg!2sbg!4v1525008147197" width="600" height="450" frameborder="0" style="border:0" allowfullscreen class="gMap"></iframe>
+    </section>
+
+    <footer>
+        <div class="container">
+
+        </div>
+    </footer>
 @endsection
