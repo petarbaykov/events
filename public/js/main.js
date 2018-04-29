@@ -32,3 +32,33 @@ var end = new Date('07/18/2018 10:1 AM');
     }
 
     timer = setInterval(showRemaining, 1000);
+
+    $(document).ready(function(){
+      $("nav li a").click(function() {
+          $(this).preventDefault;
+          $('html, body').animate({
+              scrollTop: $("."+$(this).attr('id')).offset().top - 250
+          }, 2000);
+          $(this).parent().addClass('active').siblings().removeClass( 'active' );
+      });
+      $(window).bind('scroll', function() {
+          activeMenu();
+      });
+    });
+function activeMenu(){
+  var currentTop = $(window).scrollTop();
+  var elems = $('.scrollspy');
+
+  elems.each(function(index){
+
+    var elemTop 	= $(this).offset().top - 250;
+    var elemBottom 	= elemTop + $(this).height();
+    if(currentTop >= elemTop && currentTop <= elemBottom){
+      console.log('asd')
+      var id 	= this.classList;
+      console.log(id);
+      var navElem = $('nav li a#' + id[0]+ '');
+  navElem.parent().addClass('active').siblings().removeClass( 'active' );
+    }
+  })
+}

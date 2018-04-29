@@ -1,7 +1,21 @@
 @extends('layouts.eventMaster')
 
 @section('content')
-    <header>
+    <header class="home">
+        <nav>
+          <div class="container">
+            <a href="{{asset('event/'.$event->slug)}}" class="logo">{{$event->name}}</a>
+              <ul>
+                <li><a id="home">Home</a></li>
+                <li><a id="about">About</a></li>
+                <li><a id="speakers">Speakers</a></li>
+                <li><a id="schedule">Shedule</a></li>
+                <li><a id="tickets">Tickets</a></li>
+                <li><a id="contacts">Contacts</a></li>
+              </ul>
+              <div class="clearfix"></div>
+          </div>
+        </nav>
         <div class="container">
           <div class="headerContent">
             <div class="bannerText">
@@ -44,9 +58,9 @@
         </div>
     </div>
     <!-- About -->
-    <section >
+    <section class="about scrollspy">
         <div class="container">
-          <h1>About The Event</h1>
+          <h1 class="sectionTitle">About The Event</h1>
           <p>Lid est laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips amets. Lid est laborum dolo rumes fugats untras.
 
 Rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips amets.</p>
@@ -78,34 +92,34 @@ Rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips
           <div class="statsBox">
               <h3>968</h3>
               <h4>Participents</h4>
-              <hr>
+
               <span class="fa fa-users"></span>
           </div>
           <div class="statsBox">
             <h3>117</h3>
             <h4>Speakers</h4>
-            <hr>
+
             <span class="fa fa-microphone"></span>
           </div>
           <div class="statsBox">
             <h3>121</h3>
             <h4>Sessions</h4>
-            <hr>
+
             <span class="fa fa-calendar"></span>
           </div>
           <div class="statsBox">
             <h3>87</h3>
             <h4>Sponsors</h4>
-            <hr>
+
             <span class="fa fa-windows"></span>
           </div>
       </div>
       <div class="statsOverlay"></div>
     </section>
 
-    <section class="speakers">
+    <section class="speakers scrollspy">
         <div class="container">
-            <h1>Speakers</h1>
+            <h1 class="sectionTitle">Speakers</h1>
             <div class="speakersContainer justifyFlex">
                 <div class="speakerBox">
                     <img src="{{asset('images/s1.jpg')}}">
@@ -185,7 +199,7 @@ Rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips
 
     <section class="banner">
         <div class="container justifyFlex">
-            <div class="col4">
+            <div class="col4 ">
 
                     <div class="fa fa-map-marker"></div>
                     <div>
@@ -194,7 +208,7 @@ Rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips
                     </div>
 
             </div>
-            <div class="col4">
+            <div class="col4 ">
 
                   <div class="fa fa-clock-o"></div>
                   <div>
@@ -203,7 +217,7 @@ Rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips
                   </div>
 
             </div>
-            <div class="col4">
+            <div class="col4 ">
 
                   <div class="fa fa-sitemap"></div>
                   <div>
@@ -212,7 +226,7 @@ Rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips
                   </div>
 
             </div>
-            <div class="col4">
+            <div class="col4 ">
 
                   <div class="fa fa-cutlery"></div>
                   <div>
@@ -224,9 +238,9 @@ Rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips
         </div>
     </section>
 
-    <section class="schedule">
+    <section class="schedule scrollspy">
         <div class="container">
-          <h1>Schedule</h1>
+          <h1 class="sectionTitle">Schedule</h1>
           <div class="schedule_row">
                 <span class="time">8.00 - 9.00</span>
                 <div class="activity">Регистрация</div>
@@ -251,7 +265,7 @@ Rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips
         </div>
     </section>
 
-    <section class="pricing">
+    <section class="tickets pricing  scrollspy">
         <div class="container justifyFlex">
             <div class="col3 priceBox">
                 <h3>Basic</h3>
@@ -303,7 +317,7 @@ Rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips
 
     <section class="sponsors">
         <div class="container">
-          <h1>Sponsors</h1>
+          <h1 class="sectionTitle">Sponsors</h1>
           <div class="justifyFlex">
               <div class="col3 sponsorBox">
                 <img src="{{asset('images/google.png')}}" alt="">
@@ -318,10 +332,10 @@ Rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips
         </div>
     </section>
 
-    <section class="map">
+    <section class="contacts map  scrollspy">
         <div class="container">
-            <h1>Venu Information</h1>
-            <div class="justifyFlex">
+            <h1 class="sectionTitle">Venu Information</h1>
+            <div class="justifyFlex infoTiles">
               <div class="infoTile col3">
                 <span class="fa fa-map-marker"></span>
                 <h2>Location</h2>
@@ -342,12 +356,39 @@ Rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips
             </div>
 
         </div>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d2994256.075384785!2d23.25249451783162!3d42.871193600000005!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sbg!2sbg!4v1525008147197" width="600" height="450" frameborder="0" style="border:0" allowfullscreen class="gMap"></iframe>
+
+
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19726.621903726525!2d23.283359825929875!3d42.695676282305115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa8682cb317bf5%3A0x400a01269bf5e60!2z0KHQvtGE0LjRjw!5e0!3m2!1sbg!2sbg!4v1525015577365" width="600" height="450" frameborder="0" style="border:0" allowfullscreen class="gMap"></iframe>
     </section>
 
     <footer>
         <div class="container">
+            <h2>Stay Updated - Join Our Newsletter</h2>
+            <div class="col3">
 
+            </div>
+            <div class="col3">
+
+            </div>
+            <div class="col3">
+
+            </div>
+            <div class="alignCenter">
+                <input type="text" name="" value="" placeholder="Enter your name">
+                <button type="button" name="button" class="btn">Subscribe</button>
+            </div>
+        </div>
+        <div class="subFooter">
+          <div class="container">
+            <div>
+                <span class="fa fa-facebook"></span>
+                <span class="fa fa-twitter"></span>
+                <span class="fa fa-google"></span>
+                <span class="fa fa-linkedin"></span>
+                <span class="fa fa-instagram"></span>
+            </div>
+            <p>Copyright © 2017 Eventime. All Rights Reserved.</p>
+          </div>
         </div>
     </footer>
 @endsection
