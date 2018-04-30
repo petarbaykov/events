@@ -25,3 +25,8 @@ Route::get('event/edit/{slug}','EventController@editEvent');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::group(array('prefix'=>'customizer'),function(){
+  Route::post('save','CustomizerController@save');
+});

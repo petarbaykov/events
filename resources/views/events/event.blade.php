@@ -1,5 +1,7 @@
 @extends('layouts.eventMaster')
+<?php
 
+?>
 @section('content')
     <header class="home">
         <nav>
@@ -19,8 +21,8 @@
         <div class="container">
           <div class="headerContent">
             <div class="bannerText">
-                  <h2 class="bannerSubTitle">Be part of</h2>
-                  <h1 class="confName">{{$event->name}}</h1>
+                  <h2 class="bannerSubTitle">{{$header_data->title1}}</h2>
+                  <h1 class="confName">{{$header_data->title2}}</h1>
 
                   <div class="bannerDesc justifyFlex justify-center">
                     <div class="smallDesc">17 -22 AUGUST</div>

@@ -9,9 +9,10 @@ class EventController extends Controller
     public function getEvent($slug){
 
       $event = Event::where('slug',$slug)->first();
+      parse_str(json_decode($event->header_data),  $header_data);
 
       $data = [
-
+        'header_data'=>(object)$header_data,
         'event'=>$event
       ];
       if($event){
@@ -23,6 +24,7 @@ class EventController extends Controller
 
     public function editEvent($slug){
       $event = Event::where('slug',$slug)->first();
+
 
       $data = [
 
