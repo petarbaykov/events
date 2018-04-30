@@ -4,18 +4,16 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Event;
+use App\Services\Customizer;
 class EventController extends Controller
 {
+    protected $customizer = null;
+    public function __construct(){
+        $this->customizer = new Customizer;
+    }
     public function getEvent($slug){
-
-      $event = Event::where('slug',$slug)->first();
-      parse_str(json_decode($event->header_data),  $header_data);
-
-      $data = [
-        'header_data'=>(object)$header_data,
-        'event'=>$event
-      ];
-      if($event){
+      $data = $this->customizer->getData($slug);
+      if($data["event"]){
         return view('events.event')->with($data);
       }
 
@@ -23,13 +21,7 @@ class EventController extends Controller
     }
 
     public function editEvent($slug){
-      $event = Event::where('slug',$slug)->first();
-
-
-      $data = [
-
-        'event'=>$event
-      ];
+      $data = $this->customizer->getData($slug);
       return view('events.edit')->with($data);
     }
 }

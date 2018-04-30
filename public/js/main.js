@@ -1,4 +1,4 @@
-var end = new Date('07/18/2018 10:1 AM');
+var end;
 
     var _second = 1000;
     var _minute = _second * 60;
@@ -25,15 +25,15 @@ var end = new Date('07/18/2018 10:1 AM');
         $('.hours span').html(hours);
         $('.minutes span').html(minutes);
         $('.seconds span').html(seconds);
-      /*  document.getElementById('countdown').innerHTML = days + 'days ';
-        document.getElementById('countdown').innerHTML += hours + 'hrs ';
-        document.getElementById('countdown').innerHTML += minutes + 'mins ';
-        document.getElementById('countdown').innerHTML += seconds + 'secs';*/
     }
 
-    timer = setInterval(showRemaining, 1000);
+
 
     $(document).ready(function(){
+      end  = new Date(event_date);
+      timer = setInterval(showRemaining, 1000);
+
+
       $("nav li a").click(function() {
           $(this).preventDefault;
           $('html, body').animate({

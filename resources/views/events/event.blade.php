@@ -21,13 +21,13 @@
         <div class="container">
           <div class="headerContent">
             <div class="bannerText">
-                  <h2 class="bannerSubTitle">{{$header_data->title1}}</h2>
-                  <h1 class="confName">{{$header_data->title2}}</h1>
+                  <h2 class="bannerSubTitle title1">{{$header_data->title1}}</h2>
+                  <h1 class="confName title2">{{$header_data->title2}}</h1>
 
                   <div class="bannerDesc justifyFlex justify-center">
-                    <div class="smallDesc">17 -22 AUGUST</div>
-                    <div class="smallDesc">LONDON </div>
-                    <div class="smallDesc">2017 EDITION</div>
+                    <div class="smallDesc">{{getDay($header_data->date_from)}} - {{getDay($header_data->date_to)}} {{getMonth($header_data->date_to)}}</div>
+                    <div class="smallDesc city">{{$header_data->city}} </div>
+                    <div class="smallDesc edition">{{$header_data->edition}}</div>
                   </div>
 
                   <div class="btn ">Get tickets</div>
@@ -62,26 +62,20 @@
     <!-- About -->
     <section class="about scrollspy">
         <div class="container">
-          <h1 class="sectionTitle">About The Event</h1>
-          <p>Lid est laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips amets. Lid est laborum dolo rumes fugats untras.
-
-Rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips amets.</p>
+          <h1 class="sectionTitle">{{$about_data->aboutTitle}}</h1>
+          <p>{{$about_data->aboutTitle2}}</p>
           <div class="justifyFlex">
             <div class="aboutBox">
                 <span class="fa fa-map-marker"></span>
                 <h3>Where</h3>
-                <p>West International Conference Center</p>
-
-                <p> San Francisco, CA</p>
+                <p>{{$about_data->whereText}}</p>
 
                 <div class="btn ">Learn more</div>
             </div>
             <div class="aboutBox">
               <span class="fa fa-clock-o"></span>
               <h3>When</h3>
-              <p>Saturday to Thursday (09:00 AM to 05:00 PM)</p>
-
-              <p>July 15 to 19, 2017</p>
+              <p>{{$about_data->whenText}}</p>
             </div>
           </div>
         </div>
@@ -92,28 +86,28 @@ Rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips
     <section class="stats">
       <div class="container justifyFlex statsContent">
           <div class="statsBox">
-              <h3>968</h3>
-              <h4>Participents</h4>
+              <h3>{{$about_data->box1Num}}</h3>
+              <h4>{{$about_data->box1Text}}</h4>
 
-              <span class="fa fa-users"></span>
+              <span class="fa {{$about_data->box1Icon}}"></span>
           </div>
           <div class="statsBox">
-            <h3>117</h3>
-            <h4>Speakers</h4>
+            <h3>{{$about_data->box2Num}}</h3>
+            <h4>{{$about_data->box2Text}}</h4>
 
-            <span class="fa fa-microphone"></span>
+            <span class="fa {{$about_data->box2Icon}}"></span>
           </div>
           <div class="statsBox">
-            <h3>121</h3>
-            <h4>Sessions</h4>
+            <h3>{{$about_data->box3Num}}</h3>
+            <h4>{{$about_data->box3Text}}</h4>
 
-            <span class="fa fa-calendar"></span>
+            <span class="fa {{$about_data->box3Icon}}"></span>
           </div>
           <div class="statsBox">
-            <h3>87</h3>
-            <h4>Sponsors</h4>
+            <h3>{{$about_data->box4Num}}</h3>
+            <h4>{{$about_data->box4Text}}</h4>
 
-            <span class="fa fa-windows"></span>
+            <span class="fa {{$about_data->box4Icon}}"></span>
           </div>
       </div>
       <div class="statsOverlay"></div>
@@ -123,11 +117,13 @@ Rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips
         <div class="container">
             <h1 class="sectionTitle">Speakers</h1>
             <div class="speakersContainer justifyFlex">
+              @if($speakers_data)
+                @foreach($speakers_data as $speaker)
                 <div class="speakerBox">
                     <img src="{{asset('images/s1.jpg')}}">
                     <div class="speakerInfo">
-                      <h3>Jonathan Smith</h3>
-                      <h4>COO, Apple Inc.</h4>
+                      <h3>{{$speaker->name}}</h3>
+                      <h4>{{$speaker->job}}</h4>
                     </div>
                     <div class="social">
                         <span class="fa fa-twitter"></span>
@@ -135,66 +131,8 @@ Rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips
                         <span class="fa fa-dribbble"></span>
                     </div>
                 </div>
-                <div class="speakerBox">
-                    <img src="{{asset('images/s2.jpg')}}">
-                    <div class="speakerInfo">
-                      <h3>Jonathan Smith</h3>
-                      <h4>COO, Apple Inc.</h4>
-                    </div>
-                    <div class="social">
-                        <span class="fa fa-twitter"></span>
-                        <span class="fa fa-linkedin"></span>
-                        <span class="fa fa-dribbble"></span>
-                    </div>
-                </div>
-                <div class="speakerBox">
-                    <img src="{{asset('images/s3.jpg')}}">
-                    <div class="speakerInfo">
-                      <h3>Jonathan Smith</h3>
-                      <h4>COO, Apple Inc.</h4>
-                    </div>
-                    <div class="social">
-                        <span class="fa fa-twitter"></span>
-                        <span class="fa fa-linkedin"></span>
-                        <span class="fa fa-dribbble"></span>
-                    </div>
-                </div>
-                <div class="speakerBox">
-                    <img src="{{asset('images/s1.jpg')}}">
-                    <div class="speakerInfo">
-                      <h3>Jonathan Smith</h3>
-                      <h4>COO, Apple Inc.</h4>
-                    </div>
-                    <div class="social">
-                        <span class="fa fa-twitter"></span>
-                        <span class="fa fa-linkedin"></span>
-                        <span class="fa fa-dribbble"></span>
-                    </div>
-                </div>
-                <div class="speakerBox">
-                    <img src="{{asset('images/s2.jpg')}}">
-                    <div class="speakerInfo">
-                      <h3>Jonathan Smith</h3>
-                      <h4>COO, Apple Inc.</h4>
-                    </div>
-                    <div class="social">
-                        <span class="fa fa-twitter"></span>
-                        <span class="fa fa-linkedin"></span>
-                        <span class="fa fa-dribbble"></span>
-                    </div>
-                </div>
-                <div class="speakerBox">
-                    <img src="{{asset('images/s3.jpg')}}">
-                    <div class="speakerInfo">
-                      <h3>Jonathan Smith</h3>
-                      <h4>COO, Apple Inc.</h4>
-                    </div>
-                    <div class="social">
-                        <span class="fa fa-twitter"></span>
-                        <span class="fa fa-linkedin"></span>
-                        <span class="fa fa-dribbble"></span>
-                    </div>
-                </div>
+                @endforeach
+              @endif
             </div>
         </div>
     </section>

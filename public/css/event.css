@@ -39,6 +39,7 @@ header{
   position: relative;
   color:#fff;
   background-attachment: fixed;
+  padding-bottom:90px;
 }
 .headerOverlay{
   position: absolute;

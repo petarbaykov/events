@@ -7,6 +7,11 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
       <link href="{{ asset('css/font-awesome.css') }}" rel="stylesheet">
+
+      <script type="text/javascript">
+
+        var event_date = "<?php echo $header_data->date_from ?>";
+      </script>
   </head>
 
   <body  class="text-center">

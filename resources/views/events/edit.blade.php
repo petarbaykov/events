@@ -13,6 +13,8 @@
       <script type="text/javascript">
           var baseUrl = "<?php echo asset('/'); ?>";
           var event = "<?php echo $event->slug; ?>";
+          var speakerCount = <?php echo count((array)$speakers_data); ?>;
+          var speaksersJson = {};
       </script>
   </head>
 

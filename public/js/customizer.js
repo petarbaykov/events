@@ -17,8 +17,15 @@ for (i = 0; i < acc.length; i++) {
     });
 }
 
-
+$(document).ready(function(){
+    $('form input').on("keyup",function(){
+        customizer.update(this);
+    });
+});
 var customizer = {
+    iframe:$('iframe').contents().find("body"),
+    speakerCount:speakerCount+1,
+    speakersJson:speaksersJson,
     save:function(){
       $.ajaxSetup({
         headers: {
@@ -28,11 +35,27 @@ var customizer = {
       var data = new FormData();
       $('form').each(function(index) {
           var that = $(this);
-          console.log(index);
-          data.append(that.attr('id'),that.serialize());
+          var obj = {"speakers":that.serialize()};
+
+          if(that.attr('id') != "speakers-data"){
+              data.append(that.attr('id'),that.serialize());
+          }else{
+              var counter = 0;
+                for(var j = 0; j<that.serializeArray().length;j+=2){
+
+                  counter++;
+
+                  customizer.speakersJson["speaker"+counter].name = that.serializeArray()[j].value;
+                  customizer.speakersJson["speaker"+counter].job = that.serializeArray()[j+1].value;
+
+                }
+
+              data.append(that.attr('id'),JSON.stringify(customizer.speakersJson));
+          }
+
       });
       data.append('slug',event);
-        console.log(data);
+
       $.ajax({
         url: baseUrl+"/customizer/save",
         type: 'post',
@@ -40,9 +63,28 @@ var customizer = {
         contentType: false,
         processData: false,
         success: function(data){
-            console.log(data);
+            $('iframe').attr("src", $('iframe').attr("src"));
         },
       });
+
+    },
+    update:function(self){
+        /*console.log($(customizer.iframe).find('.'+$(self).attr('name')).html());
+        $(customizer.iframe).find('.'+$(self).attr('name')).html($(self).val());*/
+    },
+    addSpeaker:function(self){
+      customizer.speakersJson["speaker"+customizer.speakerCount] = {
+          name:"",
+          job:""
+      };
+      $('#speakers-data').append('<div class="form-group">'+
+          '<label for="">Speaker '+customizer.speakerCount+'</label>'+
+          '<input type="text" name="speaker'+customizer.speakerCount+'Name" value="" class="form-control" placeholder="Enter name">'+
+            '<input type="text" name="speaker'+customizer.speakerCount+'Job" value="" class="form-control" placeholder="Enter job">'+
+      '</div>');
+
+      $(self).parent().parent().parent().css({maxHeight:$(self).parent().parent().parent().prop('scrollHeight')  + "px"}) ;
+      customizer.speakerCount++;
 
     }
 
