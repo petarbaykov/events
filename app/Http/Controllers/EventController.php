@@ -13,6 +13,7 @@ class EventController extends Controller
     }
     public function getEvent($slug){
       $data = $this->customizer->getData($slug);
+
       if($data["event"]){
         return view('events.event')->with($data);
       }
@@ -22,6 +23,7 @@ class EventController extends Controller
 
     public function editEvent($slug){
       $data = $this->customizer->getData($slug);
+      
       return view('events.edit')->with($data);
     }
 }

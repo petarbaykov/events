@@ -127,4 +127,62 @@
           @endif
   </form>
   </div>
+
+  <button class="accordion">Banner Section</button>
+  <div class="panel" >
+      <form id="banner-data">
+        <div class="form-group">
+            <label for="">Icon 1</label>
+            <input type="text" name="icon1" value="{{$banner_data->icon1}}" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="">Text 1</label>
+            <input type="text" name="text1" value="{{$banner_data->text1}}" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="">Sub Text 1</label>
+            <input type="text" name="subText1" value="{{$banner_data->subText1}}" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="">Icon 2</label>
+            <input type="text" name="icon2" value="{{$banner_data->icon2}}" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="">Text 2</label>
+            <input type="text" name="text2" value="{{$banner_data->text2}}" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="">Sub Text 2</label>
+            <input type="text" name="subText2" value="{{$banner_data->subText2}}" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="">Icon 3</label>
+            <input type="text" name="icon3" value="{{$banner_data->icon3}}" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="">Text 1=3</label>
+            <input type="text" name="text3" value="{{$banner_data->text3}}" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="">Sub Text 3</label>
+            <input type="text" name="subText3" value="{{$banner_data->subText3}}" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="">Icon 4</label>
+            <input type="text" name="icon4" value="{{$banner_data->icon4}}" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="">Text 4</label>
+            <input type="text" name="text4" value="{{$banner_data->text4}}" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="">Sub Text 4</label>
+            <input type="text" name="subText4" value="{{$banner_data->subText4}}" class="form-control">
+        </div>
+      </form>
+
+  </div>
 </div>

@@ -141,37 +141,37 @@
         <div class="container justifyFlex">
             <div class="col4 ">
 
-                    <div class="fa fa-map-marker"></div>
+                    <div class="fa {{$banner_data->icon1}}"></div>
                     <div>
-                      <h3>Wst. Conference Center</h3>
-                      San Francisco, CA
+                      <h3>{{$banner_data->text1}}</h3>
+                      {{$banner_data->subText1}}
                     </div>
 
             </div>
             <div class="col4 ">
 
-                  <div class="fa fa-clock-o"></div>
+                  <div class="fa {{$banner_data->icon2}}"></div>
                   <div>
-                    <h3>July 15 - 19, 2017</h3>
-                    09:00 AM - 05:00 PM
+                    <h3>{{$banner_data->text2}}</h3>
+                    {{$banner_data->subText2}}
                   </div>
 
             </div>
             <div class="col4 ">
 
-                  <div class="fa fa-sitemap"></div>
+                  <div class="fa {{$banner_data->icon3}}"></div>
                   <div>
-                    <h3>343 Available Seats</h3>
-                    Hurryup! few tickets are left
+                    <h3>{{$banner_data->text3}}</h3>
+                    {{$banner_data->subText3}}
                   </div>
 
             </div>
             <div class="col4 ">
 
-                  <div class="fa fa-cutlery"></div>
+                  <div class="fa {{$banner_data->icon4}}"></div>
                   <div>
-                    <h3>Free Lunch & Snacks</h3>
-                    Don't miss it
+                    <h3>{{$banner_data->text4}}</h3>
+                  {{$banner_data->subText4}}
                   </div>
 
             </div>
